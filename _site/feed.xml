@@ -1,0 +1,141 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>개발 공책</title>
+  <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
+  <updated>2022-06-02T14:57:02+08:00</updated>
+  <author>
+    <name>이명주</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator>
+  <rights> © 2022 이명주 </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>[백준] 1946번 신입사원</title>
+    <link href="http://localhost:4000/posts/algorithm-bj-1946/" rel="alternate" type="text/html" title="[백준] 1946번 신입사원" />
+    <published>2019-07-12T00:22:00+08:00</published>
+  
+    <updated>2019-07-12T00:22:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/algorithm-bj-1946/</id>
+    <content src="http://localhost:4000/posts/algorithm-bj-1946/" />
+    <author>
+      <name>steadev</name>
+    </author>
+
+  
+    
+    <category term="Algorithm" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      백준 알고리즘 1946번 신입사원 문제풀이
+
+문제
+
+신입 사원을 뽑는데, 다른 모든 지원자와 비교했을 때
+
+서류심사 성적과 면접시험 성적 중 적어도 하나가 다른 지원자보다 떨어지지 않는 자만 선발한다.
+
+이 조건을 만족시키면서 선발할 수 있는 최대 인원수는??
+
+풀이
+
+우선, 서류 성적을 기준으로 정렬을 하면, 어짜피 서류성적은 이미 정렬해놔서 고려할 필요가 없고 본인보다 서류 성적이 높은 사람들의 최고 면접 점수보다 본인의 면접 점수가 높으면 합격할 수 있습니다.
+
+1
+
+5
+
+3 2  -&amp;gt; 1 4
+
+1 4      2 3
+
+4 1      3 2
+
+2 3      4 1
+
+5 5      5 5
+
+예제를 바탕으로 위의 값(왼쪽)을 입력했다고 했을 경우,
+
+1등은 다른 지원자보다 떨어질 수가 없기...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>[백준] 2437번 저울</title>
+    <link href="http://localhost:4000/posts/algorithm-bj-2437/" rel="alternate" type="text/html" title="[백준] 2437번 저울" />
+    <published>2019-07-10T14:51:00+08:00</published>
+  
+    <updated>2019-07-10T14:51:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/algorithm-bj-2437/</id>
+    <content src="http://localhost:4000/posts/algorithm-bj-2437/" />
+    <author>
+      <name>steadev</name>
+    </author>
+
+  
+    
+    <category term="Algorithm" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      백준 알고리즘 2437번 저울 문제 풀이
+
+문제
+
+무게가 양의 정수인 N개의 저울 추가 주어졌을 때, 이 추들을 사용하여 측정할 수 없는 양의 정수 무게 중 최솟값 구하기.
+
+풀이
+
+Greedy 방식으로 해결할 수 있는 문제로, 각 추를 정렬 후 누적합을 구하면서 해결해 나갈 수 있습니다.
+
+우선, 추의 배열을 w, 누적합의 배열을 acc라고 정의하겠습니다.
+
+무게가 1인 추가 있을 때, acc[i-1] + 1 &amp;gt;= w[i] 일 경우 
+
+acc[i-1] ~ acc[i] 사이의 모든 수를 만들 수 있습니다. 
+
+만약 저 조건에 해당하지 않는다면 acc[i-1] + 1이 만들수 없는 수 입니다.
+
+그리고 무게가 1인 추가 없다면 당연히 답은 1이겠죠?
+
+문제에 제시된 예제를 통해 설명하도록 하겠습니다...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
