@@ -1,0 +1,105 @@
+---
+title: "[백준] 14502번 연구소"
+author: steadev
+date: 2019-09-11 00:25:00 +0900
+categories: [Algorithm]
+tags: [Baekjoon, algorithm]
+---
+
+
+<img src="https://steadev.github.io/assets/images/bj-14502-1.png" />
+<img src="https://steadev.github.io/assets/images/bj-14502-2.png" />
+
+# 풀이
+
+처음에는 벽을 어떻게 세울까 엄청 고민을 했는데, 조건을 보니 N, M이 최대 8밖에 안되더군요!
+
+전부 0이라고 하더라도 총 가짓수가 64\*63\*62 = 249984개밖에 안되서 완전탐색을 진행했습니다.
+
+풀이 순서는
+
+1\. 일단 재귀를 활용해서 벽 3개를 세팅
+
+2\. bfs로 2 채우기
+
+3\. 0인 개수 구하기
+
+아래는 풀이한 코드입니다.
+
+```c++
+#include <iostream>
+#include <queue>
+using namespace std;
+int xpos[] = { 0, 1, -1, 0 };
+int ypos[] = { 1, 0, 0, -1 };
+int map[8][8];
+int max_e = 0;
+int n, m;
+int bfs(int n, int m) {
+    queue<pair<int, int>> q;
+    // 맵이 항시 바뀌니 새로운 변수에 대입 후 bfs를 진행합니다.
+    int temp[8][8];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            temp[i][j] = map[i][j];
+            if (temp[i][j] == 2) {
+                q.push({ i,j });
+            }
+        }
+    }
+    while (!q.empty()) {
+        pair<int, int> pos = q.front();
+        q.pop();
+        for (int i = 0; i < sizeof(xpos) / sizeof(int); i++) {
+            int next_x = pos.first + xpos[i];
+            int next_y = pos.second + ypos[i];
+            if (next_x >= 0 && next_x < n && next_y >= 0 && next_y < m) {
+                if (temp[next_x][next_y] == 0) {
+                    q.push({ next_x,next_y });
+                    temp[next_x][next_y] = 2;
+                }
+            }
+        }
+    }
+    int result = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (temp[i][j] == 0) result++;
+        }
+    }
+    return result;
+}
+// 벽 3개를 설치하는 재귀 함수!
+void setWall(int cnt, int x, int y) {
+    if (cnt == 3) {
+        int result = bfs(n, m);
+        if (result > max_e) max_e = result;
+        return;
+    }
+    for (int i = x; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            // map[i][j] == 0에서만 끝내면 중복되는 서치를 할 때가 있기 때문에 
+            // 추가적인 조건을 달아줍니다.(i는 x부터 시작)
+            if (map[i][j] == 0 && ((i == x && j > y) || i > x)) {
+                map[i][j] = 1;
+                setWall(cnt + 1, i, j);
+                map[i][j] = 0;
+            }
+        }
+    }
+}
+int main(void) {
+    cin >> n >> m;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> map[i][j];
+        }
+    }
+    setWall(0, 0, -1);
+    cout << max_e;
+    system("pause");
+    return 0;
+}
+```
+
+질문이나 지적사항, 더 나은 방법이 있다면 답글 부탁드립니다:)
