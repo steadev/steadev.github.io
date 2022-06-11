@@ -3,7 +3,7 @@ title: "문자열 탐색 알고리즘 KMP"
 author: steadev
 date: 2019-07-25 17:24:00 +0900
 categories: [Algorithm]
-tags: [Baekjoon, algorithm]
+tags: [algorithm]
 ---
 
 

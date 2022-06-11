@@ -1,0 +1,108 @@
+---
+title: "[카카오 코딩 테스트] 후보키"
+author: steadev
+date: 2019-09-18 10:30:00 +0900
+categories: [Algorithm]
+tags: [Kakao, algorithm]
+---
+
+https://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/﻿
+
+3번 문제 후보키는 정답률이 16.09%였습니다. 완전 탐색을 어떻게 하는지만 알고 있다면 그래도 풀만한 문제였던것 같습니다. 
+
+가장 중요한 key point는 bit연산자를 활용하는 것입니다. 
+
+모든 부분집합을 bit연산으로 구하고,
+
+결과 또한 bit연산으로 걸러낼 수 있습니다.
+
+제 다른 포스팅 중 'Bit 연산으로 집합구하기'를 참고하시면 좋을 듯 합니다 :)
+
+
+
+그리고 하나 더 주의해야 할 부분은 연산자 우선순위 입니다.
+
+33번줄에 (subset[j] & i) == subset[j] 이 부분을 저는 아무 생각 없이 괄호를 안쓰고 했다가
+
+쓸데없이 헤매버렸습니다..ㅠㅠ
+
+우선순위는 ==가 더 높기 때문에 괄호를 안쓴다면 
+
+subset[j] & ( i == subset[j] ) 이 순서로 실행이 되니 당연히 안되겠죠?!!
+
+
+
+아래는 풀이한 코드입니다. main함수에 있는 relation들은 테스트 케이스로 작성한 것입니다.
+
+```c++
+#include <iostream>
+#include <vector>
+#include <string>
+#include <set>
+using namespace std;
+int solution(vector<vector<string>> relation) {
+    int rel_size = relation.size();
+    int col_len = relation[0].size();
+    int answer = 0;
+    vector<int> subset;
+    for (int i = 0; i < (1 << col_len); i++) {
+        set<string> check;
+        for (int j = 0; j < rel_size; j++) {
+            string tmp = "";
+            for (int z = 0; z < col_len; z++) {
+                if (i & (1 << z)) {
+                    // 선택된 column들을 비교하기 쉽게 전부 string으로 더해줍니다
+                    // 뒤에 공백을 추가한 것은 
+                    // {"ab", "c"}, {"a", "bc"}가 같은것으로 보이기때문!
+                    tmp += relation[j][z] + ' ';
+                }
+            }
+            // 완성된 string을 set에 넣어서 중복되는 것은 알아서 거르도록
+            check.insert(tmp);
+        }
+        // 중복이 없다면 relation의 size와 같을것!
+        if (check.size() == rel_size) {
+            bool flag = true;
+            for (int j = 0; j < subset.size();j++) {
+                // 최소값을 걸러주는 것.
+                // 8 & 10은 8이기에 10은 걸러준다.
+                // 여기에서 중요한 것은 괄호! 괄호 없이 &를 쓰면 이상한 결과가 나옵니다 
+                if ((subset[j] & i) == subset[j]) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) subset.push_back(i);
+        }
+    }
+    return subset.size();
+}
+int main(void) {
+    vector<vector<string>> relation;
+    relation = {
+        { "100","ryan","music","2" },
+        { "200","apeach","math","2" },
+        { "300","tube","computer","3" },
+        { "400","con","computer","4" },
+        { "500","muzi","music","3" },
+        { "600","apeach","music","2" }
+    };
+    relation = {
+        { "100","ryan","music","1", "a" },
+        { "100","ryan2","music","2", "b" },
+        { "100","ryan","music","3", "b" },
+        { "100","ryan3","music","4", "b" },
+        { "100","ryan","music","5", "c" },
+        { "100","ryan5","music","6", "b" }
+    };
+    relation = {
+        {"ab", "c"},
+        {"a", "bc"},
+        {"a", "x"},
+        {"x", "c"}
+    };
+    cout << solution(relation);
+    return 0;
+}
+```
+질문이나 지적사항은 댓글로 부탁드립니다 :)
