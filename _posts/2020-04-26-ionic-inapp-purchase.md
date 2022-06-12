@@ -114,7 +114,7 @@ this.store.order("my_product_id");
 
 그런데 그 페이지를 나갔다 들어올 때마다 세팅들이 중첩되기 시작했습니다. 예를들면, 
 
-```
+```typescript
 this.store.when('my_product_id').cancelled(p=>{ alert('결제가 취소되었습니다') });
 ```
 
