@@ -142,7 +142,7 @@ this.store.when('my_product_id').cancelled(p=>{ alert('결제가 취소되었습
 
 상품등록 관련은 정보가 많아서 따로 기록하진 않겠습니다. 하지만, 주의(?) 해야 할 부분 하나만 짚고 넘어가겠습니다. 
 
-<img src="https://steadev.github.io/assets/images/ionic-inapp-purchase-1.png" />
+<img src="https://steadev.github.io/assets/images/ionic/ionic-inapp-purchase-1.png" />
 
 위 사진을 보면, 분명 가격을 KRW 14900이라고 입력했지만, 아래 빨간 부분을 보면 지들 멋대로 1000원 단위로 끊어버립니다. 만원 이하는 900원이 제대로 되는 것 같은데, 그 이상은 안되는 듯 싶습니다.(가물가물..) 
 
@@ -156,7 +156,7 @@ this.store.when('my_product_id').cancelled(p=>{ alert('결제가 취소되었습
 
 결제 성공, 취소, 조금 있다 성공, 조금 있다 취소 이렇게 4가지 종류로 바로 테스트 해볼 수 있도록 제공됩니다.(갓구글...)
 
-<img src="https://steadev.github.io/assets/images/ionic-inapp-purchase-2.png" />
+<img src="https://steadev.github.io/assets/images/ionic/ionic-inapp-purchase-2.png" />
 
 ## **3\. IOS**
 
@@ -164,17 +164,17 @@ this.store.when('my_product_id').cancelled(p=>{ alert('결제가 취소되었습
 
 IOS 상품 등록도 그리 어렵진 않지만 애플이 항상 그렇듯 귀찮은 부분이 있습니다. 
 
-<img src="https://steadev.github.io/assets/images/ionic-inapp-purchase-3.png" />
+<img src="https://steadev.github.io/assets/images/ionic/ionic-inapp-purchase-3.png" />
 
 우선 위 사진의 앱 내 구입 옆에 + 버튼으로 상품을 추가해봅니다. 그러면 아래의 그림처럼 나옵니다.
 
-<img src="https://steadev.github.io/assets/images/ionic-inapp-purchase-4.png" />
+<img src="https://steadev.github.io/assets/images/ionic/ionic-inapp-purchase-4.png" />
 
 하지만.. 사실 위 그림처럼 나오려면 조건이 필요합니다.. 아무것도 안한했다면 빨간 박스의 자동 갱신 구독이 없습니다. 
 
 위에 billing.fovea.cc에서도 설명했듯이 아래 \[계약\] 부분을 완성해야 위 캡처처럼 보여, 구독 상품을 생성할 수 있고 구독 상품을 생성해야 iOS Subscription Status URL(아래 캡처의 구독 상태 URL)을 작성할 수 있습니다.
 
-<img src="https://steadev.github.io/assets/images/ionic-inapp-purchase-5.png" />
+<img src="https://steadev.github.io/assets/images/ionic/ionic-inapp-purchase-5.png" />
 
 마지막으로, 상품 내용을 작성하면 되는데, **심사정보->스크린샷** 부분을 넣어주셔야 될 겁니다.(안 넣어도 된다는 말이 있지만 혹시나 해서...)
 
@@ -200,11 +200,11 @@ IOS 상품 등록도 그리 어렵진 않지만 애플이 항상 그렇듯 귀�
 
 그러면 결제할 때 이 이메일과 비밀번호를 작성하면 정상적으로 Sandbox 결제가 진행됩니다.
 
-<img src="https://steadev.github.io/assets/images/ionic-inapp-purchase-6.png" />
+<img src="https://steadev.github.io/assets/images/ionic/ionic-inapp-purchase-6.png" />
 
 ### **\[계약\]**
 
-<img src="https://steadev.github.io/assets/images/ionic-inapp-purchase-7.png" />
+<img src="https://steadev.github.io/assets/images/ionic/ionic-inapp-purchase-7.png" />
 
 빨간 유료 앱 부분이 보이시나요?! 이 부분을 몰라서 엄청 이상한 곳에서 삽질을 오랫동안 했었습니다.. ㅠㅠ
 
