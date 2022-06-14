@@ -51,11 +51,11 @@ vector<int> solution(string s) {
     return answer;
 }
 int main() {
-    //string s = "{{2},{2,1},{2,1,3},{2,1,3,4}}";
-    //string s = "{ {1, 2, 3}, { 2,1 }, { 1,2,4,3 }, { 2 }}"; 
-    //string s = "{{20,111},{111}}";
-    //string s = "{{123}}";
-    string s = "{{4,2,3},{3},{2,3,4,1},{2,3}}";
+    {% raw %}// string s = "{{2},{2,1},{2,1,3},{2,1,3,4}}"{% endraw %};
+    {% raw %}// string s = "{ {1, 2, 3}, { 2,1 }, { 1,2,4,3 }, { 2 }}";{% endraw %} 
+    {% raw %}// string s = "{{20,111},{111}}"{% endraw %};
+    {% raw %}// string s = "{{123}}"{% endraw %};
+    string s = {% raw %}"{{4,2,3},{3},{2,3,4,1},{2,3}}"{% endraw %};
     vector<int> result = solution(s);
     for (auto x : result)
         cout << x << " ";
