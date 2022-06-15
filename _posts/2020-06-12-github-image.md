@@ -2,8 +2,8 @@
 title: "Github readme.md에 이미지 업로드 하기"
 author: steadev
 date: 2020-06-12 16:42:00 +0900
-categories: [Algorithm]
-tags: [Github, algorithm]
+categories: [Git]
+tags: [Github]
 ---
 
 직접적으로 readme 파일에 사진을 넣지는 못합니다. 그래서 우회(?) 하는 방법을 사용하는데, 

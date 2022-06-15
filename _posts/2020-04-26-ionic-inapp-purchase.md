@@ -2,8 +2,8 @@
 title: "Ionic 인앱결제 (in app purchase 2)"
 author: steadev
 date: 2020-04-26 14:43:00 +0900
-categories: [Algorithm]
-tags: [Ionic, algorithm, InAppPurchase]
+categories: [Ionic]
+tags: [Ionic, InAppPurchase]
 ---
 
 
