@@ -36,13 +36,13 @@ ReactiveX는 [Observer 패턴](https://en.wikipedia.org/wiki/Observer_pattern)�
 
 이벤트 리스너를 등록합니다.
 
-```
+```javascript
 document.addEventListener('click', () => console.log('Clicked!'));
 ```
 
 RxJS를 이용해서 observable 객체를 생성합니다.
 
-```
+```javascript
 import { fromEvent } from 'rxjs';
 
 fromEvent(document, 'click').subscribe(() => console.log('Clicked!'));
@@ -54,14 +54,14 @@ RxJS를 강력하게 만드는 것은 순수 함수를 사용하여 value를 창
 
 다른 부분의 코드가 state를 망칠 수 있는 비순수함수를 만듭니다.
 
-```
+```javascript
 let count = 0;
 document.addEventListener('click', () => console.log(`Clicked ${++count} times`));
 ```
 
 RxJS를 이용하여 state를 떨어뜨립니다.
 
-```
+```javascript
 import { fromEvent } from 'rxjs';
 import { scan } from 'rxjs/operators';
 
@@ -78,7 +78,7 @@ RxJS는 이벤트의 흐름이 observable을 통과하는 방식을 컨트롤할
 
 아래는 초당 최대 한번의 클릭을 허용하는 코드입니다. (순수 Javascript)
 
-```
+```javascript
 let count = 0;
 let rate = 1000;
 let lastClick = Date.now() - rate;
@@ -92,7 +92,7 @@ document.addEventListener('click', () => {
 
 RxJS:
 
-```
+```javascript
 import { fromEvent } from 'rxjs';
 import { throttleTime, scan } from 'rxjs/operators';
 
@@ -112,7 +112,7 @@ observable을 통과해서 값을 바꿀 수 있습니다. 
 
 아래는 매 클릭마다 현재 마우스의 x위치를 더하는 코드입니다. (순수 Javascript)
 
-```
+```javascript
 let count = 0;
 const rate = 1000;
 let lastClick = Date.now() - rate;
@@ -127,7 +127,7 @@ document.addEventListener('click', event => {
 
 RxJS:
 
-```
+```javascript
 import { fromEvent } from 'rxjs';
 import { throttleTime, map, scan } from 'rxjs/operators';
 
