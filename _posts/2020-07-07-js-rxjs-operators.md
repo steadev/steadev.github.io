@@ -27,7 +27,7 @@ RxJS는 Observable이 기본이지만, 대부분 연산자에 유용합니다. �
 
 예를들어, [map](https://rxjs.dev/api/operators/map) 이라는 연산자는 같은 이름의 배열 메소드와 유사합니다. \[1, 2, 3\].map(x => x \* x) 의 결과는 \[1, 4, 9\] 인 것처럼, Observable은 아래와 같이 생성됩니다:
 
-```
+```javascript
 import { of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -41,7 +41,7 @@ map(x => x * x)(of(1, 2, 3)).subscribe((v) => console.log(`value: ${v}`));
 
 1, 4, 9의 결과가 나옵니다. 다른 유용한 연산자는 [first](https://rxjs.dev/api/operators/first) 입니다:
 
-```
+```javascript
 import { of } from 'rxjs';
 import { first } from 'rxjs/operators';
 
@@ -57,7 +57,7 @@ map은 논리적으로 즉석에서 구성되어야 합니다. 매핑 기능을 
 
 파이프형 연산자들은 함수입니다. 그래서 보통의 함수처럼 사용될 수 있습니다. op()(obs) ㅡ 하지만 실제로는, 많은 연산자들이 함께 모이는 경향이 있습니다. 그리고 읽을수 없게 되어버립니다: op4()(op3()(op2()(op1()(obs)))). 이런 이유로, Observable은 .pipe()라는 메소드가 있습니다. 이는 똑같은 일이지만 훨신 가독성이 좋게 해줍니다: 
 
-```
+```javascript
 obs.pipe(
   op1(),
   op2(),
@@ -74,7 +74,7 @@ op()(obs) 는 절대 쓰이지 않습니다. 심지어 하나의 연산자만 �
 
 생성 연산자의 전형적인 예제는 interval 함수입니다. 이는 숫자를 인자로 받아 Observable을 생성해 반환합니다:
 
-```
+```javascript
 import { interval } from 'rxjs';
 
 const observable = interval(1000 /* number of milliseconds */);
@@ -86,7 +86,7 @@ const observable = interval(1000 /* number of milliseconds */);
 
 Observable은 가장 보편적으로 string, number 같은 보통의 값들을 내보냅니다. 하지만 놀랍게도 종종, Observable의 Observable을 다뤄야 할 필요가 있습니다. 소위 고차 Observable이라 합니다. 예를 들어, 파일의 URL인 string들을 내보내는 Observable이 있다고 상상해봅시다. 코드는 아래와 같을 것입니다:
 
-```
+```javascript
 const fileObservable = urlObservable.pipe(
    map(url => http.get(url)),
 );
@@ -96,7 +96,7 @@ http.get()은 각각의 URL에 대해 (string 혹은 string 배열의) Observab
 
 하지만 고차 Observable로 어떻게 작업을 해야할까요? 일반적으로, 평탄화해서 사용합니다: 어떤 방법을 이용해서 고차 Observable을 하나의 보통의 Observable로 바꿔줍니다. 예시:
 
-```
+```javascript
 const fileObservable = urlObservable.pipe(
    map(url => http.get(url)),
    concatAll(),
@@ -282,7 +282,7 @@ Also see the [Join Creation Operators](https://rxjs.dev/guide/operators#join-cr
 
 예를들어, 아래와 같이 홀수를 버리고 짝수를 2배하는 함수를 만들 수 있습니다:
 
-```
+```javascript
 import { pipe } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 
@@ -300,7 +300,7 @@ function discardOddDoubleEven() {
 
 더 복잡하지만, 기존 연산자의 조합으로 만들 수없는 연산자를 작성해야하는 경우(드물게 발생하지만...) 아래와 같이 Observable 생성자를 사용하여 처음부터 연산자를 작성할 수 있습니다:
 
-```
+```javascript
 import { Observable } from 'rxjs';
 
 function delay(delayInMillis) {
