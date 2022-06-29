@@ -1,7 +1,7 @@
 ---
 title: "[Angular] 상태관리 with Mobx"
 author: steadev
-date: 2020-07-12 17:55:00 +0900
+date: 2020-08-23 22:09:00 +0900
 categories: [Angular]
 tags: [angular, mobx]
 ---
