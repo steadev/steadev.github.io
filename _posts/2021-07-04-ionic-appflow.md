@@ -101,7 +101,7 @@ if (update.available) {
 
 #### **5\. 웹 빌드 및 배포**
 
-우선 Commits에 커밋들 목록이 보이고, 빌드를 원하는 커밋 선택시 아래처럼 보이게 될 것입니다.
+우선 Commits에 커밋 목록이 보이고, 빌드를 원하는 커밋 선택시 아래처럼 보이게 될 것입니다.
 
 <img src="https://steadev.github.io/assets/images/ionic/2021-07-04-3.png" />
 
