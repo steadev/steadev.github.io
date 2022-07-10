@@ -233,3 +233,9 @@ $499/mo 정책의 경우 25000/mo 밖에 안됩니다.
 이상 Ionic의 Live Update에 대한 설명이었습니다!
 
 혹시 질문이나 부족한 부분이 있다면 댓글 부탁드립니다 :)
+
+참고)
+
+[https://ionic.zendesk.com/hc/en-us/articles/360003567694-How-to-restrict-Live-Update-by-native-version](https://ionic.zendesk.com/hc/en-us/articles/360003567694-How-to-restrict-Live-Update-by-native-version)
+
+[https://ionic.zendesk.com/hc/en-us/articles/360002243614-What-Are-Binary-Compatible-Changes-](https://ionic.zendesk.com/hc/en-us/articles/360002243614-What-Are-Binary-Compatible-Changes-)
