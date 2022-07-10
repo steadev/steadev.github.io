@@ -2,7 +2,7 @@
 title: "[Javascript] RxJS - Overview 번역"
 author: steadev
 date: 2020-07-01 20:47:00 +0900
-categories: [JAVASCRIPT]
+categories: [Javascript]
 tags: [javascript, rxjs]
 ---
 

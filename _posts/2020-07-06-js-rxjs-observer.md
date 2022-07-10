@@ -2,7 +2,7 @@
 title: "[Javascript] RxJS - Observer"
 author: steadev
 date: 2020-07-06 11:51:00 +0900
-categories: [JAVASCRIPT]
+categories: [Javascript]
 tags: [javascript, rxjs, observer]
 ---
 

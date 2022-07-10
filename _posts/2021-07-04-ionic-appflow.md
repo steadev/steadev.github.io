@@ -3,7 +3,7 @@ title: "[Ionic] DevOps Solution - AppFlow"
 author: steadev
 date: 2021-07-04 15:51:00 +0900
 categories: [Ionic]
-tags: [ionic, javascript, appflow]
+tags: [Ionic, Appflow]
 ---
 
 

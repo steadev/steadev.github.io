@@ -2,7 +2,7 @@
 title: "[Javascript] RxJS - Operators"
 author: steadev
 date: 2020-07-07 13:57:00 +0900
-categories: [JAVASCRIPT]
+categories: [Javascript]
 tags: [javascript, rxjs, observer]
 ---
 

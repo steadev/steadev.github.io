@@ -2,7 +2,7 @@
 title: "[Javascript] RxJS - Subscription"
 author: steadev
 date: 2020-07-09 15:12:00 +0900
-categories: [JAVASCRIPT]
+categories: [Javascript]
 tags: [javascript, rxjs, subscription]
 ---
 

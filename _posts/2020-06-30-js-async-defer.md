@@ -2,7 +2,7 @@
 title: "script 속성 async / defer"
 author: steadev
 date: 2020-06-30 21:29:00 +0900
-categories: [JAVASCRIPT]
+categories: [Javascript]
 tags: [javascript, html, async, defer]
 ---
 

@@ -2,7 +2,7 @@
 title: "[Javascript] RxJS - Subject"
 author: steadev
 date: 2020-07-12 17:55:00 +0900
-categories: [JAVASCRIPT]
+categories: [Javascript]
 tags: [javascript, rxjs, subject]
 ---
 
