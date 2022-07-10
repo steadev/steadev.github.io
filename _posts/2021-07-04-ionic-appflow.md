@@ -226,7 +226,7 @@ $499/mo 정책의 경우 25000/mo 밖에 안됩니다.
 
 만약 native 배포까지 처리하려면 app flow를 사용해야겠지만
 
-아니라면 AppCenter를 활용하는 것이 좋아보입니다.
+아니라면 AppCenter를 활용하는 것이 좋아보입니다.
 
 다음에는 AppCenter를 통해 Ionic앱 codepush하는 방법에 대해 포스팅 하겠습니다.
 
