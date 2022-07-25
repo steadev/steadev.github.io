@@ -19,13 +19,13 @@ tags: [HTML]
 
 ## meter
 
-- progress와 유사하지만, 단계별로 색을 표현할 수 있다.
+- progress와 유사하지만, 단계별로 색을 표현할 수 있습니다.
 
 ```html
 <meter value="20" min="0" max="100" low="20" high="65"></meter>
 ```
 
-- 단계별 색을 커스터마이징 할 수 있다.
+- 단계별 색을 커스터마이징 할 수 있습니다.
 
  high 초과:  `meter::-webkit-meter-even-less-good-value` (non-standard. do not use in production)
 
@@ -33,9 +33,9 @@ low 이상 ~ high 이하:  `meter::-webkit-meter-optimum-value`
 
 low 미만:  `meter::-webkit-meter-suboptimum-value`
 
-- optimum값을 지정해 줄 경우는 조금 달라진다
+- optimum값을 지정해 줄 경우는 조금 달라집니다.
 
-optimum값이 위치한 범위(low미만 / 중간 / high초과)에 css로 지정한 색이 입혀진다.
+optimum값이 위치한 범위(low미만 / 중간 / high초과)에 css로 지정한 색이 입혀집니다.
 
 ```html
 <meter value="20" min="0" max="100" low="20" high="65" optimum="75"></meter>
@@ -59,6 +59,7 @@ optimum값이 위치한 범위(low미만 / 중간 / high초과)에 css로 지정
 
 - window size별로 다른 이미지를 제공할 수 있는 태그
 - window size가 작은데 용량 큰 고화질 이미지를 제공할 필요가 없으니 빠른 로딩 가능
+- `media` 파라미터로 `min-width` or `max-width` 설정. 반응형 media 쿼리와 동일하게 동작
 
 ```html
 <picture>
@@ -72,19 +73,21 @@ optimum값이 위치한 범위(low미만 / 중간 / high초과)에 css로 지정
 ## datalist
 
 - 자동완성 기능을 제공할 수 있는 태그
-- `input` 태그의 `list` 속성과 `datalist` 의 id를 매칭만 시켜주면 된다.
+- `input` 태그의 `list` 속성과 `datalist` 의 id를 매칭만 시켜주면 됩니다.
 
 ```html
 <input type="text" list="input-options" />
 <datalist id="input-options">
-    <option value="스티브"></option>
-    <option value="스티브2"></option>
-    <option value="제이슨"></option>
-    <option value="우키"></option>
-    <option value="환"></option>
-    <option value="캡"></option>
+    <option value="option1"></option>
+    <option value="option2"></option>
+    <option value="option3"></option>
+    <option value="option4"></option>
+    <option value="option5"></option>
+    <option value="option6"></option>
 </datalist>
 ```
+
+위의 태그들이 모두 포함된 html 예시 코드입니다. 아래 사진과 같이 나옵니다.
 
 ```html
 <html>
@@ -122,7 +125,7 @@ optimum값이 위치한 범위(low미만 / 중간 / high초과)에 css로 지정
                 <summary>Front-End</summary>
                 <div>Angular</div>
                 <div>React</div>
-                <div>Vew</div>
+                <div>Veu</div>
                 <div>Svelte</div>
             </details>
         </div><br><br>
@@ -148,3 +151,4 @@ optimum값이 위치한 범위(low미만 / 중간 / high초과)에 css로 지정
     </body>
 </html>
 ```
+<img src="https://steadev.github.io/assets/images/html/2022-07-25-1.png" />
