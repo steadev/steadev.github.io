@@ -1,4 +1,4 @@
-<!-- ---
+---
 title: "유용한 html tags"
 author: steadev
 date: 2022-07-25 23:48:00 +0900
@@ -140,15 +140,15 @@ optimum값이 위치한 범위(low미만 / 중간 / high초과)에 css로 지정
         <div>
             <input type="text" list="input-options" />
             <datalist id="input-options">
-                <option value="스티브"></option>
-                <option value="스티브2"></option>
-                <option value="제이슨"></option>
-                <option value="우키"></option>
-                <option value="환"></option>
-                <option value="캡"></option>
+                <option value="option1"></option>
+                <option value="option2"></option>
+                <option value="option3"></option>
+                <option value="option4"></option>
+                <option value="option5"></option>
+                <option value="option6"></option>
             </datalist>
         </div>
     </body>
 </html>
 ```
-<img src="https://steadev.github.io/assets/images/html/2022-07-25-1.png" /> -->
+<img src="https://steadev.github.io/assets/images/html/2022-07-25-1.png" />
