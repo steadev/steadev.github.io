@@ -1,4 +1,4 @@
-<!-- ---
+---
 title: "Lambda@Edge를 통한 Dynamic OG Tags, SEO"
 author: steadev
 date: 2022-05-27 13:19:00 +0900
@@ -9,7 +9,7 @@ tags: [AWS, Lambda@Edge]
 
 <img src="https://steadev.github.io/assets/images/aws/2022-05-27-1.png" />
 
-End user에게 데이터가 가는 중간 과정 각각에 lambda@edge를 통해서 관여할 수 있습니다.
+End user에게 데이터가 가는 중간 과정 각각에 lambda@edge를 통해서 관여할 수 있습니다.
 
 **Viewer Request**   \- End User로부터 CloudFront로 요청이 도착한 직후
 
@@ -185,4 +185,4 @@ response headers를 초기화하는 부분에 cache를 disable하도록 작성�
 
 혹시나 비슷한 문제를 겪는 분들께 도움이 되기를 바랍니다 :)
 
-질문이나 부족한 부분이 있다면 댓글 부탁드립니다! -->
+질문이나 부족한 부분이 있다면 댓글 부탁드립니다!
