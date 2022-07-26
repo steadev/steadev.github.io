@@ -3,7 +3,7 @@ title: "유용한 html tags"
 author: steadev
 date: 2022-07-25 23:48:00 +0900
 categories: [HTML]
-tags: [HTML]
+tags: [html]
 ---
 
 
