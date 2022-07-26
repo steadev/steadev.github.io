@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "유용한 html tags"
 author: steadev
 date: 2022-07-25 23:48:00 +0900
@@ -151,4 +151,4 @@ optimum값이 위치한 범위(low미만 / 중간 / high초과)에 css로 지정
     </body>
 </html>
 ```
-<img src="https://steadev.github.io/assets/images/html/2022-07-25-1.png" />
+<img src="https://steadev.github.io/assets/images/html/2022-07-25-1.png" /> -->
