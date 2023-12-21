@@ -1,5 +1,5 @@
 ---
-title: "[칭찬일기 개발기 #1] 기술 스펙 선택"
+title: "[칭찬일기 개발기 #2] 폴더 구조"
 author: steadev
 date: 2023-11-26 12:41:00 +0900
 categories: [React Native]
